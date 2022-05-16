@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "Akkurat";
+    src: url("../fonts/Akkurat.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/GothamBold.ttf") format("truetype");
+    src: url("../fonts/Gotham-Bold.otf") format("opentype");
+}
+
+:root {
+    --headfont: "Gotham";
+    --bodyfont: "Akkurat";
+    --offwhite: #fbf9f7;
+    --backgroundblack: #1a1a1a;
+    --container-margin: 80px;
+    --grid-columns: 12;
+    --greytext: rgb(150, 150, 150);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 4rem;
+    font-family: "Gotham";
+}
+
+h2 {
+    margin-bottom: 0;
+    font-family: var(--bodyfont);
+    font-size: 2rem;
+    font-weight: 200;
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 1rem;
+    margin-right: 10%;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    line-height: 1.8rem;
+    /* margin-bottom: 2rem; */
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0 5% 0 5%;
+}
+
+figcaption {
+    font-family: var(--bodyfont);
+    text-align: right;
+    font-weight: lighter;
+    margin-top: .5rem;
+    color: var(--greytext);
+}
+
+.rows {
+    grid-template-rows: 5;
+}
+
+#art_info {
+    margin-top: 12rem;
+    /* margin-left: 2%;
+    margin-right: 2%; */
+    /* padding: 5% 10% 5% 10%; */
+    /* margin: 5% 10% 5% 10%; */
+}
+
+.left_info {
+    grid-column: 2/7;
+}
+
+p.left_info {
+    max-width: 60ch;
+}
+
+.img_large {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    grid-column: 7/12;
+    grid-row: 1/6;
+}
+
+#puzzle {
+    grid-column: 4/10;
+    width: 100%;
+    height: 50rem;
+    /* border: solid 1px var(--greytext); */
+    text-align: center;
+    margin-top: 14rem;
+    margin-bottom: 12rem;
+}
+
+
+
+
+
+
+#related {
+    margin: 8rem 0 12rem 0;
+}
+
+#related h2 {
+    grid-column: 2/5;
+    margin-bottom: 4rem;
+}
+
+.related_gallery {
+    grid-column: 2/12;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+div.related_gallery>img {
+    /* max-width: 20vw;
+    height: auto; */
+}
+
+@media screen and (max-width: 755px) {
+
+    section,
+    #related {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #puzzle {
+        height: 20rem;
+    }
+}
